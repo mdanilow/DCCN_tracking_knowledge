@@ -1,0 +1,23 @@
+Dependencies
+============
+
+We use MatConvNet v1.0beta24 (included).
+MatConvNet depends on CUDA and cudnn for speed.
+We used CUDA 8.0 and cudnn 5.1.
+
+Installation
+============
+
+The process to build MatConvNet is contained in install.sh.
+If you already have an operational version of MatConvNet installed,
+you can alternatively modify `matconvnet_dir` in cfnet/src/tracking/startup.m.
+
+We assume that CUDA is installed in the system libraries.
+
+It is necessary to install (extract) cudnn in in matconvnet/local/cuda/.
+
+CPU Mode
+========
+
+To run the tracker in CPU mode, uncomment the appropriate line in cfnet/src/tracking/run_baseline5_VOT.m.
+To build MatConvNet without CUDA support, modify install.sh according to the comment in that file.
